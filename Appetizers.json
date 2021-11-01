@@ -1,0 +1,21 @@
+[
+    {
+        "name": "Chicken Egg Rolls",
+        "picture": "images/chicken_egg_roll_platter.jpg",
+        "description": "Crispy fried eggrolls filled with chicken and cabbage",
+        "price": "$5.00"
+    },
+    {
+        "name": "Vegetable Egg Rolls",
+        "picture": "images/vegetable_egg_roll.jpg",
+        "description": "Crispy fried eggroll filled with our unique vegetable mixture",
+        "price": "4.00"
+
+    },
+    {
+        "name": "Crunchy Drumsticks",
+        "picture": "images/crunchy_drumsticks.jpg",
+        "description": "Juicy Baked Chicken Drumsticks With Crunchy Breading",
+        "price": "$4.00"
+    }
+]

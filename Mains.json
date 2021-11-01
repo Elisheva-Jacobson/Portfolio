@@ -1,0 +1,44 @@
+[
+    {
+        "name": "General Tso's Chicken",
+        "picture": "images/General_Tso_Chicken.jpg",
+        "description": "Spicy chicken with pineapple in sauce",
+        "price": "$10.00"
+    },
+    {
+        "name": "Sesame Chicken",
+        "picture": "images/sesame_chicken.jpg",
+        "description": "Batter-fried chicken in sesame sauce",
+        "price": "$10.00"
+    },
+    {
+        "name": "Grilled Chicken Platter",
+        "picture": "images/grilled_chicken_platter.jpg",
+        "description": "Grilled marinated chicken on a bed of vegetables",
+        "price": "$11.00"
+    },
+    {
+        "name": "Schnitzel Platter",
+        "picture": "images/schnitzel_platter.jpg",
+        "description": "Breaded schnitzel. Serves two.",
+        "price": "$9.00"
+    },
+    {
+        "name": "Spicy Chicken",
+        "picture": "images/spicy_chicken.jpg",
+        "description": "Spicy baked chicken bottoms. Serves two.",
+        "price": "$10.00"
+    },
+    {
+        "name": "Bone-in Steak",
+        "picture": "images/steak_platter.jpg",
+        "description": "10 oz rib steak grilled to perfection.",
+        "price": "$20.00"
+    },
+    {
+        "name": "Sweet and Sour Chicken",
+        "picture": "images/sweet_and_sour_chicken.jpg",
+        "description": "Batter-fried chicken in sweet and sour sauce",
+        "price": "$10.00"
+    }
+]

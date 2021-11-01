@@ -1,0 +1,22 @@
+[
+    {
+        "title": "Appetizers",
+        "file": "Appetizers.json"
+    },
+    {
+        "title": "Mains",
+        "file": "Mains.json"
+    },
+    {
+        "title": "Sides",
+        "file": "Sides.json"
+    },
+    {
+        "title": "Desserts",
+        "file": "Desserts.json"
+    },
+    {
+        "title": "Drinks",
+        "file": "Drinks.json"
+    }
+]

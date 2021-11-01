@@ -1,0 +1,32 @@
+[
+    {
+        "name": "French Fries",
+        "picture": "images/french_fries.jpg",
+        "description": "Crispy french fries served with ketchup",
+        "price": "$3.50"
+    },
+    {
+        "name": "Spicy Fries",
+        "picture": "images/spicy_fries.jpg",
+        "description": "Spicy cajun fries served with ketchup" ,
+        "price": "$3.75"
+    },
+    {
+        "name": "Onion Rings",
+        "picture": "images/onion_rings.jpg",
+        "description": "Crispy breaded onion rings",
+        "price": "$3.50"
+    },
+    {
+        "name": "Homemade Onion Rings",
+        "picture": "images/homemade_onion_rings.jpg",
+        "description": "Giant fried battered onion rings",
+        "price": "$4.00"
+    },
+    {
+        "name": "White Rice",
+        "picture": "images/white_rice.jpg",
+        "description": "Sticky white rice, asian style",
+        "price": "$3.00"
+    }
+]
