@@ -1,7 +1,7 @@
 [
     {
         "name": "Pepsi",
-        "picture": "images/pepsi_bottle.png",
+        "picture": "images/pepsi_bottle.jpg",
         "description": "20 oz bottle",
         "price": "$1.50"
     }
