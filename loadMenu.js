@@ -3,17 +3,18 @@
 
     const menuSections = $('#sections');
     const itemArea = $('#items');
+    const popUpDiv = $('#popUp');
 
     async function loadMenuSections() {
         try {
             const r = await fetch('menuSections.json');
             if (!r.ok) {
-                console.log("threw defined error");
+                //console.log("threw defined error");
                 throw new Error(`${r.status} ${r.statusText}`);
             }
             const obj = await r.json();
             showSections(obj);
-            console.log("printing object in loadMenuSections", obj);
+            //console.log("printing object in loadMenuSections", obj);
             loadMenuItems(obj);
             return obj;
             //return obj.PromiseResult;
@@ -25,7 +26,7 @@
 
 
     function showSections(object) {
-        console.log("printing object in show sections", object);
+        //console.log("printing object in show sections", object);
         object.forEach(elem => {
             $(`<li class = "foodType"><a href="#${elem.title}">${elem.title}</a></li>`).appendTo(menuSections);
             $(`<section id ="${elem.title}"><h2>${elem.title}</h2></section>`).appendTo(itemArea);
@@ -35,7 +36,7 @@
     }
 
     async function loadMenuItems(menuObject) {
-        console.log("printing object in loadMenuItems", menuObject);
+        //console.log("printing object in loadMenuItems", menuObject);
         //const otherObject = Object.keys(menuObject);
         //const newObject = Object.values(menuObject);
         for (let i = 0; i < menuObject.length; i++) {
@@ -82,8 +83,22 @@
         });
     }
 
+    function popUp() {
+        popUpDiv.show();
+    }
+
     // const menuObject = loadMenuSections();
     loadMenuSections();
+
+    $(document).on('click', '.menuItem', () => {
+        console.log('menu Item clicked');
+        popUp();
+    });
+
+    // $('.menuItem').click(() => {
+    //     console.log('menu Item clicked');
+    //     popUp();
+    // });
     // if (menuObject) {
     //     console.log(menuObject);
     //     console.log("got this far");

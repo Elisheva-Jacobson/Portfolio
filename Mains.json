@@ -2,43 +2,129 @@
     {
         "name": "General Tso's Chicken",
         "picture": "images/General_Tso_Chicken.jpg",
-        "description": "Spicy chicken with pineapple in sauce",
-        "price": "$10.00"
+        "description": "Spicy chicken with pineapple in sauce. Comes with a choice of two sides.",
+        "price": "$10.00",
+        "options": {
+            "Sides": {
+                "instructions": "Please choose two sides",
+                "choices": [
+                    "French Fries",
+                    "White Rice",
+                    "Onion Rings"
+                ]
+            }
+        }
     },
     {
         "name": "Sesame Chicken",
         "picture": "images/sesame_chicken.jpg",
         "description": "Batter-fried chicken in sesame sauce",
-        "price": "$10.00"
+        "price": "$10.00",
+        "options": {
+            "Sides": {
+                "instructions": "Please choose two sides",
+                "choices": [
+                    "French Fries",
+                    "White Rice",
+                    "Onion Rings"
+                ]
+            }
+        }
     },
     {
         "name": "Grilled Chicken Platter",
         "picture": "images/grilled_chicken_platter.jpg",
         "description": "Grilled marinated chicken on a bed of vegetables",
-        "price": "$11.00"
+        "price": "$11.00",
+        "options": {
+            "Sides": {
+                "instructions": "Please choose two sides",
+                "choices": [
+                    "French Fries",
+                    "White Rice",
+                    "Onion Rings"
+                ]
+            }
+        }
     },
     {
         "name": "Schnitzel Platter",
         "picture": "images/schnitzel_platter.jpg",
         "description": "Breaded schnitzel. Serves two.",
-        "price": "$9.00"
+        "price": "$9.00",
+        "options": {
+            "Sides": {
+                "instructions": "Please choose two sides",
+                "choices": [
+                    "French Fries",
+                    "White Rice",
+                    "Onion Rings"
+                ]
+            }
+        }
     },
     {
         "name": "Spicy Chicken",
         "picture": "images/spicy_chicken.jpg",
         "description": "Spicy baked chicken bottoms. Serves two.",
-        "price": "$10.00"
+        "price": "$10.00",
+        "options": {
+            "Sides": {
+                "instructions": "Please choose two sides",
+                "choices": [
+                    "French Fries",
+                    "White Rice",
+                    "Onion Rings"
+                ]
+            }
+        }
     },
     {
         "name": "Bone-in Steak",
         "picture": "images/steak_platter.jpg",
         "description": "10 oz rib steak grilled to perfection.",
-        "price": "$20.00"
+        "price": "$20.00",
+        "options": {
+            "Sides": {
+                "instructions": "Please choose two sides",
+                "choices": [
+                    "French Fries",
+                    "White Rice",
+                    "Onion Rings"
+                ]
+            },
+            "Desired doneness": {
+                "instructions": "Please choose your desired level of doneness",
+                "choices": [
+                    "Rare",
+                    "Medium Rare",
+                    "Medium",
+                    "Medium Well",
+                    "Well Done"
+                ]
+            }
+        }
     },
     {
         "name": "Sweet and Sour Chicken",
         "picture": "images/sweet_and_sour_chicken.jpg",
         "description": "Batter-fried chicken in sweet and sour sauce",
-        "price": "$10.00"
+        "price": "$10.00",
+        "options": {
+            "Sides": {
+                "instructions": "Please choose two sides",
+                "choices": [
+                    "French Fries",
+                    "White Rice",
+                    "Onion Rings"
+                ]
+            },
+            "Requests": {
+                "instructions": "Please select any options that you would like to request",
+                "choices": [
+                    "Sauce on side"
+                ]
+            }
+        }
     }
 ]

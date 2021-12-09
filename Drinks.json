@@ -1,8 +1,19 @@
 [
     {
-        "name": "Pepsi",
+        "name": "Soda Bottle",
         "picture": "images/pepsi_bottle.jpg",
         "description": "20 oz bottle",
-        "price": "$1.50"
+        "price": "$1.50",
+        "options": {
+            "Flavor": {
+                "instructions": "Please select one of the following flavors",
+                "choices": [
+                    "Pepsi",
+                    "Diet Pepsi",
+                    "Sprite",
+                    "Diet Sprite"
+                ]
+            }
+        }
     }
 ]
