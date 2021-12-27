@@ -10,8 +10,8 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
-    <link rel="stylesheet" href="restaurant_project_mobile.css">
-    <link rel="stylesheet" href="menu_mobile.css">
+    <link rel="stylesheet" href="css/restaurant_project_mobile.css">
+    <link rel="stylesheet" href="css/menu_mobile.css">
 </head>
 </head>
 
@@ -31,7 +31,9 @@
         <div id="lowerBar">
             <ul id="sections">
             </ul>
-            <span id="cart"></span>
+            <span id="cart"> </span>
+            <img src="tinierShoppingBag.jpg" alt="shopping bag" id="shoppingBag">
+
         </div>
 
     </header>
@@ -40,17 +42,19 @@
     </div>
 
     <div id="popUp">
-        <form action="">
+        <form action="" id="addItem">
             <h3 id="foodName"></h3>
-            <h4 class="optionType"></h4>
-            <p class="instructions"></p>
-            <label for=""><input type="checkbox" name="" id="" class="option"></label>
-            <label for=""> <input type="checkbox" name="" id="" class="option"></label>
-            <label for=""> <input type="checkbox" name="" id="" class="option"></label>
+            <div id="options">
+                <!--h4 class="optionType"></!--h4>
+                <p class="instructions"></p>
+                <label for=""><input type="checkbox" name="" id="" class="option"></label>
+                <label for=""> <input type="checkbox" name="" id="" class="option"></label>
+                <label-- for=""> <input type="checkbox" name="" id="" class="option"></label-->
+            </div>
             <label for="">Comments</label>
-            <textarea name="" id="" cols="30" rows="10"></textarea>
-            <div id="addToCart">Qty <img src="minus.jpg" alt="minus"><span id="quantity">1</span><img src="plus.jpg"
-                    alt="plus"><button id="add">Add to Cart</button></div>
+            <textarea name="comments" id="" cols="30" rows="10"></textarea>
+            <div id="addToCart">Qty <img src="minus.jpg" alt="minus" id="minus"><span id="quantity">1</span><img
+                    src="plus.jpg" alt="plus" id="plus"><button id="add">Add to Cart</button></div>
         </form>
     </div>
 

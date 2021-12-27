@@ -46,7 +46,7 @@
         "picture": "images/onion_rings.jpg",
         "description": "Crispy breaded onion rings",
         "price": "$3.50",
-        "options": {d
+        "options": {
             "Requests": {
                 "instructions": "Please select your requests",
                 "choices": [

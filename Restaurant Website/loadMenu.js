@@ -4,6 +4,14 @@
     const menuSections = $('#sections');
     const itemArea = $('#items');
     const popUpDiv = $('#popUp');
+    const foodName = $('#foodName');
+    const optionsDiv = $('#options');
+    const menuItems = [];
+    const cart = [];
+    const quantity = $('#quantity');
+    const addItem = $('#addItem');
+    const comments = $('#comments');
+    const cartNum = $('#cart');
 
     async function loadMenuSections() {
         try {
@@ -72,28 +80,87 @@
 
     function showItems(category, object) {
         object.forEach(elem => {
-            $(` <div class="menuItem">
-            <figure>
-                <figcaption>${elem.name}</figcaption>
-                <img src="${elem.picture}" alt="" class="itemImage">
+            menuItems.push(elem);
+            $(` <div class="menuItem" data-index = "${menuItems.length - 1}">
+            <figure data-index = "${menuItems.length - 1}">
+                <figcaption data-index = "${menuItems.length - 1}">${elem.name}</figcaption>
+                <img src="${elem.picture}" alt="" class="itemImage" data-index = "${menuItems.length - 1}">
             </figure>
-            <p class="description">${elem.description}</p>
-            <div class="price">${elem.price}</div>
+            <p class="description" data-index = "${menuItems.length - 1}">${elem.description}</p>
+            <div class="price" data-index = "${menuItems.length - 1}">${elem.price}</div>
         </div>`).appendTo($(`#${category}`));
         });
     }
 
-    function popUp() {
+    function popUp(id) {
+        //console.log(menuItems);
+        const item = menuItems[id];
+        console.log(item);
+        foodName.text(item.name);
+        if (item.options) {
+            const optionTypes = Object.keys(item.options);
+            const information = Object.values(item.options);
+            for (let i = 0; i < optionTypes.length; i++) {
+
+                $(`<h4 class="optionType">${optionTypes[i]}</h4>`).appendTo(optionsDiv);
+                $(`<p class="instructions">${information[i].instructions}</p>`).appendTo(optionsDiv);
+                information[i].choices.forEach(c => {
+                    $(`<label for="">${c}<input type="checkbox" name="${optionTypes[i]}" id="" class="option"></label>`).appendTo(optionsDiv);
+                });
+            }
+            optionsDiv.show();
+        }
         popUpDiv.show();
     }
 
-    // const menuObject = loadMenuSections();
-    loadMenuSections();
+    function numCart() {
+        let previousNum = parseInt(cartNum.text());
+        if (previousNum) {
+            cartNum.text(++previousNum);
+        } else {
+            cartNum.text('1');
+        }
+    }
 
-    $(document).on('click', '.menuItem', () => {
-        console.log('menu Item clicked');
-        popUp();
+    $('#plus').click(() => {
+        let previousQ = parseInt(quantity.text());
+        quantity.text(++previousQ);
+
     });
+
+    $('#minus').click(() => {
+        let previousQ = parseInt(quantity.text());
+        if (previousQ > 1) {
+            quantity.text(--previousQ);
+        }
+
+    });
+
+    addItem.click(event => {
+        event.preventDefault();
+        const cartItem = {
+            name: foodName.text(),
+            quantity: quantity.text(),
+            comments: comments.text()
+        };
+        cart.push(cartItem);
+        popUpDiv.hide();
+        numCart();
+        //need to retrieve the option values
+    });
+
+    // const menuObject = loadMenuSections();
+
+
+    $(document).on('click', '.menuItem', event => {
+        console.log('menu Item clicked');
+        const target = $(event.target);
+        console.log(target.data('index'));
+        //console.log(event.target.data);
+        popUp(target.data('index'));
+    });
+
+    loadMenuSections();
 
     // $('.menuItem').click(() => {
     //     console.log('menu Item clicked');
