@@ -1,5 +1,4 @@
-//import { myAPIkeys } from '../config.js';
-/*globals myAPIkeys */
+import { myAPIkeys } from '../config.js';
 //import $ from 'jquery';
 // import { jquery } from './index.js';
 // const $ = jquery;

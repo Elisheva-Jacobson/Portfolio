@@ -1,5 +1,4 @@
-//import {myAPIkeys} from '../config.js';
-/*globals myAPIkeys */
+import {myAPIkeys} from '../config.js';
 
 // const attractionsSelect = $('#attractionsSelect');
 // const attractionsDisplay = $('#attractionsDisplay');
