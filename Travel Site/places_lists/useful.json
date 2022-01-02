@@ -1,0 +1,50 @@
+[
+    {
+        "name": "ATM",
+        "value": "atm"
+    },
+    {
+        "name": "Bank",
+        "value": "bank"
+    },
+    {
+        "name": "Car Repair",
+        "value": "car_repair"
+    },
+    {
+        "name": "Car Wash",
+        "value": "car_wash"
+    },
+    {
+        "name": "Convenience Store",
+        "value": "convenience_store"
+    },
+    {
+        "name": "Embassy",
+        "value": "embassy"
+    },
+    {
+        "name": "Gas Station",
+        "value": "gas_station"
+    },
+    {
+        "name": "Gym",
+        "value": "gym"
+    },
+    {
+        "name": "Laundry",
+        "value": "laundry"
+    }, {
+        "name": "Lodging",
+        "value": "lodging"
+    }, {
+        "name": "Parking",
+        "value": "parking"
+    }, {
+        "name": "Police Station",
+        "value": "police_station"
+    }, {
+        "name": "Post Office",
+        "value": "post_office"
+    }
+]

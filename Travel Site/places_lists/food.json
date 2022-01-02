@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Bakery",
+        "value": "bakery"
+    },
+    {
+        "name": "Bar",
+        "value": "bar"
+    },
+    {
+        "name": "Cafe",
+        "value": "cafe"
+    },
+    {
+        "name": "Grocery",
+        "value": "grocery_store"
+    },
+    {
+        "name": "Restaurant",
+        "value": "restaurant"
+    },
+    {
+        "name": "Supermarket",
+        "value": "supermarket"
+    }
+]

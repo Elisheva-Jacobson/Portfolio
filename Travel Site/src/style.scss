@@ -1,0 +1,423 @@
+
+$background-color: white;
+$secondary-background-color: #12B2EB;
+$third-background-color: #BFFBFA;
+$highlight-color: blue;
+$colors-array: (#81D31A, #34AC8B, #D85C00, #C3260C);
+
+$minimal-spacing: .25em;
+$moderate-padding: .5em;
+$standard-padding: 1em;
+
+$header-height: 80px;
+$second-nav-height: 30px;
+
+@mixin full-width($height: 100%) {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: $height;
+    box-sizing: border-box;
+}
+
+@mixin set-margin($margin: 10%) {
+    margin: $margin;
+    width: (100% - ($margin * 2));
+    padding: 0;
+}
+
+@mixin set-border($width: 1px, ) {
+    border: $width solid black;
+    border-collapse: collapse;
+}
+
+@mixin border-input {
+    @include set-border();
+    border-radius: .25em;
+    box-shadow: inset 1px 2px 8px rgba(0, 0, 0, 0.07);
+}
+
+@mixin emphasize-text() {
+    font-weight: bold;
+    font-size: 1.25em;
+}
+
+@mixin bar($top: 0%) {
+    @include full-width();
+    position: fixed;
+    left: 0;
+    top: $top;
+}
+
+@mixin flex-center($direction: row) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: $direction;
+}
+
+// @mixin grid-center() {
+//     padding: $standard-padding;
+//     place-self: center;
+//     text-align: center;
+// }
+
+@mixin invert-colors($background: black) {
+    color: white;
+    background: $background;
+}
+
+* {
+    font-family: Tahoma, Geneva, Verdana, sans-serif;
+    //outline: 1px solid red;
+}
+
+html {
+    @include full-width();
+}
+
+body {
+    background-color: $background-color;
+    @include full-width();
+}
+
+main {
+    @include full-width();
+    padding-top: $header-height;
+}
+
+header {
+    // background-color: black;
+    // color: white;
+    background-color: darkgray;
+    @include bar();
+    height: $header-height;
+    @include flex-center();
+}
+
+nav {
+    padding-top: $standard-padding;
+    padding-bottom: $standard-padding;
+    padding-right: $minimal-spacing;
+    padding-left: $minimal-spacing;
+    text-align:center;
+}
+
+ul, li {
+    display: inline;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: black;
+    padding: $moderate-padding;
+    margin: 0;
+}
+
+a:hover {
+    color: $highlight-color;
+}
+
+input, select {
+    width: 125px;
+    margin: $minimal-spacing;
+    @include border-input();
+}
+
+button {
+    display: inline;
+    @include border-input();
+}
+
+h2 {
+    padding: $minimal-spacing;
+    margin: 0;
+}
+
+h4 {
+    padding: 0;
+    margin: 0;
+}
+
+#cities, #covid, #translate, #weather {
+    display: none;
+}
+
+#home {
+    @include full-width();
+    //background-image: url('../images/world_map-min.jpg');
+    // padding-top: $moderate-padding;
+    // padding-bottom: $moderate-padding;
+    //should put this back if take away colors
+
+    vertical-align: center;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr .5fr 1fr;
+    // grid-template-columns: 1fr 1fr;
+    // grid-template-rows: 1fr 1fr;
+
+    // grid-template-columns: 1fr;
+    // grid-template-rows: repeat(5, 1fr);
+
+    #mainHome {
+        background-image: url('../images/gray-world-map-min.jpg');
+        grid-row: 1 / 2;
+
+        // grid-column: 1 / 3;
+        // grid-row: 1 / 2;
+    }
+
+    #mission {
+
+        // grid-column: 1 / 2;
+        // grid-row: 2 / 3;
+       grid-row: 2 / 3;
+
+       display: inline-block;
+       @include full-width();
+       //@include grid-center();
+       //display: flex;
+       @include flex-center(column);
+       padding: $standard-padding;
+       //@include invert-colors(#1063DE);
+       //flex-direction: column;
+       //justify-content: center;
+
+    //    div {
+    //        margin: auto;
+    //    }
+    }
+
+    #whatToDo {
+
+        // grid-column: 2 / 3;
+        // grid-row: 2 / 3;
+        grid-row: 3 / 4;
+        display: inline-block;
+        @include full-width();
+        // height: 100%;
+        // width: 100%;
+        // box-sizing: border-box;
+
+       //@include grid-center();
+       @include flex-center(column);
+       //flex-direction: column;
+       @include invert-colors();
+       padding: $standard-padding;
+
+    //    div {
+    //        margin: auto;
+    //    }
+    }
+
+    ul, li {
+        list-style-type: none;
+    }
+
+    li {
+        display: block;
+        padding: $moderate-padding;
+    }
+
+    // .blurb {
+    //     padding: $minimal-spacing;
+    //     padding-right: $moderate-padding;
+    //     padding-left: $moderate-padding;
+    //     text-align: justify;
+    //     place-self: center;
+    // }
+
+    // h2 {
+    //     @include emphasize-text();
+    //     padding: $minimal-spacing;
+    //     padding-right: $moderate-padding;
+    //     padding-left: $moderate-padding;
+    //     text-align: justify;
+    //     place-self: center;
+    //     // background-color: black;
+    //     // color: white;
+    // }
+
+    // #citiesBlurb {
+    //     background-color: #81D31A;
+    // }
+
+    // #weatherBlurb {
+    //     background-color: #C3260C;
+    // }
+
+    // #translateBlurb {
+    //     background-color:#34AC8B;
+    // }
+
+    // #covidBlurb {
+    //     background-color:#D85C00 ;
+    // }
+    //needs to be smaller
+}
+
+#cities {
+    padding-top: $second-nav-height;
+    
+    .place {
+        border-top: 2px solid black;
+        border-bottom: 2px solid black;
+        border-collapse: collapse;
+        padding: $standard-padding;
+        //overflow-wrap: break-word;
+    }
+
+    #attractions, #food, #health, #stores, #transportation, #useful {
+        display: none;
+    }
+
+    h2 {
+        @include emphasize-text();
+    }
+
+    nav {
+        @include bar($header-height);
+        @include flex-center();
+        padding-top: $moderate-padding;
+        padding-bottom: $moderate-padding;
+        background-color: $third-background-color;
+        height: $second-nav-height;
+    }
+
+    #citiesInputs, #citiesDetails {
+        padding-right: $moderate-padding;
+        padding-left: $moderate-padding;
+    }
+}
+
+#weather {
+    .day, #currentWeather {
+        @include set-border();
+        text-align: center;
+
+        .date, #now {
+            @include emphasize-text();
+        }
+    }
+
+   #weatherInfo {
+       display: none;
+   }
+}
+
+#translate {
+
+    @include full-width();
+
+    #chooseLang {
+        @include full-width();
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #translateInput, #translateInput:focus {
+        outline: none;
+        border: none;
+    }
+    
+    #translateInputDiv {
+        @include set-border();
+        @include full-width();
+
+        #translateInput {
+            margin-right: 1%;
+            padding: $moderate-padding;
+            width: 99%;
+            box-sizing: border-box;
+            height: 70%;
+            display: inline-block;
+            background-color: $background-color;
+        }
+    } 
+    
+    #translateOutputDiv {
+        @include set-border();
+        @include full-width();
+
+        #translateOutput {
+        @include full-width(70%);
+        padding: $moderate-padding;
+        display: inline-block;
+        background-color: $background-color;
+        }
+    }
+
+    #translateInputDiv span,
+#translateOutputDiv label {
+    display: inline-block;
+    @include full-width(20%);
+    @include set-border();
+    padding: $standard-padding;
+    }
+
+    #translateGo {
+        display: block;
+        margin: auto;
+    }
+
+}
+
+#covid {
+    #covidDaily {
+        display: none;
+    }
+
+    th, td {
+        @include set-border();
+        padding: $minimal-spacing;
+    }
+    
+    table {
+        @include set-margin();
+        @include set-border();
+    }
+
+    td:nth-child(2) {
+        text-align: right;
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    #home {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+
+        #mainHome {
+            grid-column: 1 / 3;
+            grid-row: 1 / 2;
+        }
+
+        #mission {
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
+        }
+
+        #whatToDo {
+            grid-column: 2 / 3;
+            grid-row: 2 / 3;
+        }
+    }
+
+    #translate {
+        #chooseLang {
+            @include full-width(50%);
+        }
+    }
+
+    #cities {
+        h2 {
+            @include emphasize-text();
+        }
+    }
+}
+

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Information</title>
+    <!--link rel="stylesheet" href="travel.css"-->
+    <link rel="apple-touch-icon" sizes="180x180" href="icon2/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icon2/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icon2/favicon-16x16.png">
+    <link rel="manifest" href="icon2/site.webmanifest">
+    <!--link rel="shortcut icon" href="favicon.ico" type="image/x-icon"-->
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home" id="homeLink">Home</a></li>
+                <li><a href="#cities" id="citiesLink">Cities Information</a></li>
+                <li><a href="#weather" id="weatherLink">Weather</a></li>
+                <!--li><a href="" id="photosLink">Photos</a></li-->
+                <!--li><a href="" id="mapsLink">Maps</a></li-->
+                <!--li><a href="" id="flightsLink">Flights</a></li-->
+                <!--li><a href="" id="businessLink">Local Businesses</a></li-->
+                <!--li><a href="" id="currencyLink">Currency converter</a></li-->
+                <li><a href="#translate" id="translateLink">Language Translation</a></li>
+                <li><a href="#covid" id="covidLink">Covid Statistics</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home">
+            <div id="mainHome"></div>
+            <div id="mission">
+                    <h4>Who We Are</h4>
+                    <p>Our mission is to provide travelers with all of the information they need, completely free.
+                    </p>
+                </div>
+            <div id="whatToDo">
+                    <h4>What You Can Do</h4>
+                    <ul>
+                        <li>Find attractions, places to eat, and shopping in any city <a href="#cities"><img
+                                    src="images/arrow.png" alt="Arrow"> </a> </li>
+                        <li>Locate car rentals, ATMs, gas stations, hotels, doctors and more in any city <a
+                                href="#cities"><img src="images/arrow.png" alt="Arrow"> </a> </li>
+                        <li>Check your destination's weather forecast <a href="#weather"><img src="images/arrow.png"
+                                    alt="Arrow">
+                            </a>
+                        </li>
+                        <li>Translate between more than 100 languages <a href="#translate"><img src="images/arrow.png"
+                                    alt="Arrow"></a> </li>
+                        <li>Get current covid statistics on any country <a href="#covid"><img src="images/arrow.png"
+                                    alt="Arrow"> </a>
+                        </li>
+                    </ul>
+            </div>
+            <!--h2>Traveling? All of your information needs on one convenient website.</h2>
+
+            <h4 class="blurb" id="citiesBlurb"> Visiting an unfamiliar city? Check out interesting attractions,
+                eateries, and stores on
+                our cities page. You can also find means of transportation, health resources, and useful places such
+                as gas stations and ATMs. </h4>
+            <h4 class="blurb" id="weatherBlurb">Want to know the weather forecast before you book? You can check the
+                weather on our
+                weather page.
+            </h4>
+            <h4 class="blurb" id="translateBlurb">Are you visiting a country that speaks a different language? Want to
+                brush up on a few
+                important words before you go? On our translation page, you can translate between more than 100
+                languages
+                with ease.</h4>
+            <h4-- class="blurb" id="covidBlurb">Concerned about outbreaks of covid-19? View new and historical covid data
+                by country on
+                our covid statistics page.</h4-->
+        </section>
+        <section id="cities">
+            <nav>
+                <ul>
+                    <li><a href="#attractions" id="attractionsLink">Activities & Attractions</a></li>
+                    <li><a href="#food" id="foodLink">Food</a></li>
+                    <li><a href="#transportation" id="transportationLink">Transportation</a></li>
+                    <li><a href="#stores" id="storesLink">Stores</a></li>
+                    <li><a href="#health" id="healthLink">Health Resources</a></li>
+                    <li><a href="#useful" id="usefulLink">Useful</a></li>
+                </ul>
+            </nav>
+            <div id="citiesInputs"><label for="">City<input type="text" id="citiesCityInput"></label>
+                <label for="">Country
+                    <select name="" id="citiesCountrySelect"></select>
+                </label>
+            </div>
+            <div id="citiesDetails">
+                <div id="citiesError"></div>
+                <div id="attractions">
+                    <h2>Find fun and interesting activities and attractions</h2>
+                    <label for="">Attraction Type <select name="" id="attractionsSelect"></select></label>
+                    <button id="attractionsGo">Go</button>
+                    <div class="display" id="attractionsDisplay">
+                    </div>
+                </div>
+                <div id="food">
+                    <h2>Find places to eat or buy food</h2>
+                    <label for="">Type of eatery <select name="" id="foodSelect"></select></label>
+                    <button id="foodGo">Go</button>
+                    <div class="display" id="foodDisplay"></div>
+                </div>
+                <div id="transportation">
+                    <h2>Find bus stations, car rentals, taxi stands, and other ways to get around</h2>
+                    <label for="">Type of transportation <select name="" id="transportationSelect"></select></label>
+                    <button id="transportationGo">Go</button>
+                    <div class="display" id="transportationDisplay"></div>
+                </div>
+                <div id="stores">
+                    <h2>Find stores and shopping, including jewelry stores, department stores, shopping centers, and
+                        more</h2>
+                    <label for="">Type of store<select name="" id="storesSelect"></select></label>
+                    <button id="storesGo">Go</button>
+                    <div class="display" id="storesDisplay"></div>
+                </div>
+                <div id="health">
+                    <h2>Find hospitals, doctors, pharmacies, and other health resources</h2>
+                    <label for="">Type of health resource <select name="" id="healthSelect"></select></label>
+                    <button id="healthGo">Go</button>
+                    <div class="display" id="healthDisplay"></div>
+                </div>
+                <div id="useful">
+                    <h2>Find gas stations, ATMs, places to stay, and more</h2>
+                    <label for=""> Type of place <select name="" id="usefulSelect"></select></label>
+                    <button id="usefulGo">Go</button>
+                    <div class="display" id="usefulDisplay"></div>
+                </div>
+            </div>
+
+
+
+        </section>
+        <section id="weather">
+            <form action=""><label for="">City<input type="text" id="cityInputWeather" required></label>
+                <label for="">Country <select name="" id="countriesWeather"></select></label>
+                <button id="weatherForecast">Weather Forecast</button>
+            </form>
+            <div id="weatherAlerts"></div>
+            <div id="errorWeather"></div>
+            <div id="weatherInfo">
+
+                <div id="currentWeather">
+                    <div id="now">Now <span id="currentDate"></span></div>
+                    <div id="currentWeatherBrief"></div>
+                    <div id="currentDescription"></div>
+                    <img class="icon">
+                    <div>Temperature <span id="currentTemp"></span>
+                    </div>
+                    <div>Feels Like <span id="currentFeel"></span>
+                    </div>
+                    <div>Cloud Cover <span id="currentClouds"></span>
+                    </div>
+                    <div>Wind Speed <span id="currentWindSpeed"></span>
+                    </div>
+                    <div>Humidity <span id="currentHumidity"></span>
+                    </div>
+                </div>
+                <div id="diffDayWeather">
+
+                </div>
+            </div>
+
+            <!--button id="nextDay">Next Day</button-->
+        </section>
+
+        <section id="translate">
+            <form action="" id="chooseLang">
+                <div id="translateInputDiv">
+                    <span>Type text below</span>
+                    <textarea id="translateInput" placeholder="Enter Text" required></textarea>
+                    <button id="translateGo">Go</button>
+                </div>
+                <div id="translateOutputDiv">
+                    <label for="languages">Choose a language to translate to: <select name="languages" id="language"
+                            required>
+                            <!--option value="">Language</!--option-->
+                        </select></label>
+                    <div id="translateOutput"></div>
+                </div>
+            </form>
+
+        </section>
+        <section id="covid">
+            <form action="">
+                <div>Choose a country and get the latest country data on Covid</div>
+                <label for="countries">Country
+                    <select name="countries" id="countries"></select>
+                </label>
+                <button id="covidStats">Get Latest Statistics</button>
+
+            </form>
+            <div id="covidDisplay">
+                <div id="errorCovid"></div>
+
+                <table id="covidDaily">
+                    <thead>
+                        <tr>
+                            <th id="covidCountry" colspan="2"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>New Cases</td>
+                            <td id="newCases"></td>
+                        </tr>
+                        <tr>
+                            <td>Active Cases</td>
+                            <td id="active"></td>
+                        </tr>
+                        <tr>
+                            <td>Critical Cases</td>
+                            <td id="critical"></td>
+                        </tr>
+                        <tr>
+                            <td>Recovered</td>
+                            <td id="recovered"></td>
+                        </tr>
+                        <tr>
+                            <td>Total Cases</td>
+                            <td id="totalCases"></td>
+                        </tr>
+                        <tr>
+                            <td>Cases per million population</td>
+                            <td id="casesMill"></td>
+                        </tr>
+                        <tr>
+                            <td>New Deaths</td>
+                            <td id="newDeaths"></td>
+                        </tr>
+                        <tr>
+                            <td>Total Deaths</td>
+                            <td id="totalDeaths"></td>
+                        </tr>
+                        <tr>
+                            <td>Deaths per million population</td>
+                            <td id="deathsMill"></td>
+                        </tr>
+                        <tr>
+                            <td>Total Tests</td>
+                            <td id="totalTests"></td>
+                        </tr>
+                        <tr>
+                            <td>Tests per million population</td>
+                            <td id="testsMill"></td>
+                        </tr>
+                        <tr>
+                            <td>Population</td>
+                            <td id="population"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!--script src="./node_modules/qs/dist/qs.js"></script-->
+    <!--script src="covid.js"></!--script-->
+    <!--script src="translate.js"></!--script-->
+    <script src="dist/main.js"></script>
+</body>
+
+</html>

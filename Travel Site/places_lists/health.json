@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Dentist",
+        "value": "dentist"
+    },
+    {
+        "name": "Doctor",
+        "value": "doctor"
+    },
+    {
+        "name": "Hospital",
+        "value": "hospital"
+    },
+    {
+        "name": "Pharmacy",
+        "value": "pharmacy"
+    },
+    {
+        "name": "Veterinarian",
+        "value": "veterinarian"
+    }
+]

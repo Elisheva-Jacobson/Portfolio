@@ -1,0 +1,34 @@
+[
+    {
+        "name": "Airport",
+        "value": "airport"
+    },
+    {
+        "name": "Bus station",
+        "value": "bus_station"
+    },
+    {
+        "name": "Car rental",
+        "value": "car_rental"
+    },
+    {
+        "name": "Rail station",
+        "value": "rail_station"
+    },
+    {
+        "name": "Subway station",
+        "value": "subway station"
+    },
+    {
+        "name": "Taxi stand",
+        "value": "taxi_stand"
+    },
+    {
+        "name": "Train station",
+        "value": "train_station"
+    },
+    {
+        "name": "Transit station",
+        "value": "transit_station"
+    }
+]

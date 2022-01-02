@@ -1,0 +1,50 @@
+[
+    {
+        "name": "Amusement Park",
+        "value": "amusement_park"
+    },
+    {
+        "name": "Aquarium",
+        "value": "aquarium"
+    },
+    {
+        "name": "Art Gallery",
+        "value": "art_gallery"
+    },
+    {
+        "name": "Bowling",
+        "value": "bowling"
+    },
+    {
+        "name": "Cinema",
+        "value": "cinema"
+    },
+    {
+        "name": "Library",
+        "value": "library"
+    },
+    {
+        "name": "Museum",
+        "value": "museum"
+    },
+    {
+        "name": "RV park",
+        "value": "rv_park"
+    },
+    {
+        "name": "Park",
+        "value": "park"
+    },
+    {
+        "name": "Stadium",
+        "value": "stadium"
+    },
+    {
+        "name": "Tourist Attraction",
+        "value": "tourist_attraction"
+    },
+    {
+        "name": "Zoo",
+        "value": "zoo"
+    }
+]

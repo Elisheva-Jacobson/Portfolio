@@ -1,0 +1,78 @@
+[
+    {
+        "name": "All stores",
+        "value": "store"
+    },
+    {
+        "name": "Bicycle store",
+        "value": "bicycle_store"
+    },
+    {
+        "name": "Book store",
+        "value": "book_store"
+    },
+    {
+        "name": "Clothing store",
+        "value": "clothing_store"
+    },
+    {
+        "name": "Convenience store",
+        "value": "convenience_store"
+    },
+    {
+        "name": "Department store",
+        "value": "department_store"
+    },
+    {
+        "name": "Electronics store",
+        "value": "electronics_store"
+    },
+    {
+        "name": "Flowers store",
+        "value": "flowers_store"
+    },
+    {
+        "name": "Furniture store",
+        "value": "furniture_store"
+    },
+    {
+        "name": "Grocery",
+        "value": "grocery_store"
+    },
+    {
+        "name": "Hardware store",
+        "value": "hardware_store"
+    },
+    {
+        "name": "Home goods store",
+        "value": "home_goods_store"
+    },
+    {
+        "name": "Jewelry store",
+        "value": "jewelry_store"
+    },
+    {
+        "name": "Liquor store",
+        "value": "liquor_store"
+    },
+    {
+        "name": "Pet store",
+        "value": "pet_store"
+    },
+    {
+        "name": "pharmacy",
+        "value": "pharmacy"
+    },
+    {
+        "name": "Shoe store",
+        "value": "shoe_store"
+    },
+    {
+        "name": "Shopping center",
+        "value": "shopping_center"
+    },
+    {
+        "name": "Supermarket",
+        "value": "supermarket"
+    }
+]
