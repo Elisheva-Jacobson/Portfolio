@@ -14,7 +14,7 @@ import { myAPIkeys } from '../config.js';
 export const displayLanguages = async /*function showLanguages*/() => {
     'use strict';
     try {
-        const r = await fetch('../languages.json');
+        const r = await fetch('../Travel_Site/languages.json');
         if (!r.ok) {
             throw new Error(`${r.status} ${r.statusText}`);
         }
