@@ -68,37 +68,37 @@ const citiesCountrySelect = $('#citiesCountrySelect');
 
 const placesArray = [{
     div: $('#attractions'),
-    file: '../places_lists/attractions.json',
+    file: '../Travel_Site/places_lists/attractions.json',
     select: $('#attractionsSelect'),
     link: $('#attractionsLink'),
     button: $('#attractionsGo')
 }, {
     div: $('#food'),
-    file: '../places_lists/food.json',
+    file: '../Travel_Site/places_lists/food.json',
     select: $('#foodSelect'),
     link: $('#foodLink'),
     button: $('#foodGo')
 }, {
     div: $('#health'),
-    file: '../places_lists/health.json',
+    file: '../Travel_Site/places_lists/health.json',
     select: $('#healthSelect'),
     link: $('#healthLink'),
     button: $('#healthGo'),
 }, {
     div: $('#stores'),
-    file: '../places_lists/shopping.json',
+    file: '../Travel_Site/places_lists/shopping.json',
     select: $('#storesSelect'),
     link: $('#storesLink'),
     button: $('#storesGo')
 }, {
     div: $('#transportation'),
-    file: '../places_lists/transportation.json',
+    file: '../Travel_Site/places_lists/transportation.json',
     select: $('#transportationSelect'),
     link: $('#transportationLink'),
     button: $('#transportationGo')
 }, {
     div: $('#useful'),
-    file: '../places_lists/useful.json',
+    file: '../Travel_Site/places_lists/useful.json',
     select: $('#usefulSelect'),
     link: $('#usefulLink'),
     button: $('#usefulGo')
