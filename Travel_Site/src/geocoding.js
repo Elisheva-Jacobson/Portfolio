@@ -6,7 +6,7 @@ import {myAPIkeys} from '../config.js';
 export const countriesList = async (select) => {
     'use strict';
     try {
-        const r = await fetch('../countries.json');
+        const r = await fetch('../Travel_Site/countries.json');
         if (!r.ok) {
             throw new Error(`${r.status} ${r.statusText}`);
         }
