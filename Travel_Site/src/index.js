@@ -111,19 +111,21 @@ function populatePlaces() {
         place.link.click(() => {
             if (place.div.css('display') !== 'block') {
                 placesArray.forEach(p => p.div.hide());
+                $(place.div.children('.display')).text('');//to clear from other searches
                 place.div.show();
                 if (place.select.children().length < 1) {
                     console.log('length is less than 1 by type select');
                     placesList(place.file, place.select);
-                } else {
-                    console.log('children', place.select.children());
-                    console.log('length', place.select.children().length);
-                }
+                } 
+                // else {
+                //     console.log('children', place.select.children());
+                //     console.log('length', place.select.children().length);
+                // }
             }
         });
         place.button.click(async event => {
             event.preventDefault();
-            console.log('button clicked');
+            //console.log('button clicked');
             const arr = await getLatLon(citiesCityInput.val(), citiesCountrySelect.val(), $('#citiesError'));
             findPlaces(arr, $(place.div.children('.display')), place.select.val());
         });
