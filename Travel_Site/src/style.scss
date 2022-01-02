@@ -3,7 +3,7 @@ $background-color: white;
 $secondary-background-color: #12B2EB;
 $third-background-color: #BFFBFA;
 $highlight-color: blue;
-$colors-array: (#81D31A, #34AC8B, #D85C00, #C3260C);
+//$colors-array: (#81D31A, #34AC8B, #D85C00, #C3260C);
 
 $minimal-spacing: .25em;
 $moderate-padding: .5em;
@@ -206,7 +206,7 @@ h4 {
        //@include grid-center();
        @include flex-center(column);
        //flex-direction: column;
-       @include invert-colors();
+       @include invert-colors(navy);
        padding: $standard-padding;
 
     //    div {
