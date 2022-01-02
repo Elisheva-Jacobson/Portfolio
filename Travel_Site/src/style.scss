@@ -89,7 +89,7 @@ main {
 header {
     // background-color: black;
     // color: white;
-    background-color: darkgray;
+    background-color: rgb(16, 157, 212) ;
     @include bar();
     height: $header-height;
     @include flex-center();
