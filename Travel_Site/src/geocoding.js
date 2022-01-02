@@ -1,7 +1,8 @@
 //import $ from 'jquery';
 // import {jquery} from './index.js';
 // const $ = jquery;
-import {myAPIkeys} from '../config.js';
+//import {myAPIkeys} from '../config.js';
+/*globals myAPIkeys */
 
 export const countriesList = async (select) => {
     'use strict';

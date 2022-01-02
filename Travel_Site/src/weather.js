@@ -1,7 +1,8 @@
 //import $ from 'jquery';
 // import {jquery} from './index.js';
 // const $ = jquery;
-import {myAPIkeys} from '../config.js';
+//import {myAPIkeys} from '../config.js';
+/*globals myAPIkeys */
 
 let currentWeather;
 let weatherForecast = [];
@@ -25,7 +26,7 @@ export const dailyWeather = async (arr) => {
         weatherForecast = [];
         //extraneous that set it above then.
         //also, should see if will even be a problem or if will be cleared automatically
-        
+
         currentWeather = {
             date: getDate(data.current.dt),
             temperature: data.current.temp,
@@ -37,7 +38,7 @@ export const dailyWeather = async (arr) => {
             description: data.current.weather[0].description,
             icon: data.current.weather[0].icon
         };
-      
+
 
         data.daily.forEach(day => {
             weatherForecast.push({
@@ -62,7 +63,7 @@ export const dailyWeather = async (arr) => {
             });
         });
         //weather alerts are not being handled
-       
+
         showWeather();
         $('#weatherInfo').show();
     } catch (err) {
@@ -89,7 +90,7 @@ const showWeather = () => {
     $('#currentWeather .icon').attr('src', `https://openweathermap.org/img/wn/${currentWeather.icon}@2x.png`)/*.attr('alt', currentWeather.weather)*/;
     $('#currentWindSpeed').text(`${currentWeather.windSpeed}mph`);
     $('#currentHumidity').text(`${currentWeather.humidity}%`);
-    
+
     $('#diffDayWeather').text('');
     //to clear it from earlier appendings
     for (let i = 0; i < weatherForecast.length; i++) {
