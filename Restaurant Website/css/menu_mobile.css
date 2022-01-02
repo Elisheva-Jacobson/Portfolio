@@ -188,5 +188,11 @@ section h2 {
 #options {
     display: none;
 }
+
+#sidebar {
+    /* position: fixed;
+    top: 
+    display: none; */
+}
 /*
 Problem: when have multiple options popUp doesn't fit on the page*/
