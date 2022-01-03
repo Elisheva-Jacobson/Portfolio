@@ -12,6 +12,7 @@
     const addItem = $('#addItem');
     const comments = $('#comments');
     const cartNum = $('#cart');
+    const xButton = $('#x');
 
     async function loadMenuSections() {
         try {
@@ -158,6 +159,10 @@
         console.log(target.data('index'));
         //console.log(event.target.data);
         popUp(target.data('index'));
+    });
+
+    xButton.click(() => {
+        popUpDiv.hide();
     });
 
     loadMenuSections();

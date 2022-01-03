@@ -167,6 +167,15 @@ section h2 {
     z-index: 10;
 }
 
+#x {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
 .instructions {
     font-style: italic;
     font-size: .75em;
