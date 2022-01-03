@@ -198,6 +198,14 @@ section h2 {
     display: none;
 }
 
+.menuSection::before {
+    content: '';
+    display: block;
+    height:      140px;
+    margin-top: -140px;
+    visibility: hidden;
+  }
+
 #sidebar {
     /* position: fixed;
     top: 

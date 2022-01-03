@@ -38,7 +38,7 @@
         //console.log("printing object in show sections", object);
         object.forEach(elem => {
             $(`<li class = "foodType"><a href="#${elem.title}">${elem.title}</a></li>`).appendTo(menuSections);
-            $(`<section id ="${elem.title}"><h2>${elem.title}</h2></section>`).appendTo(itemArea);
+            $(`<section class = "menuSection" id ="${elem.title}"><h2>${elem.title}</h2></section>`).appendTo(itemArea);
 
         });
         // $('.foodType').click(() => );
