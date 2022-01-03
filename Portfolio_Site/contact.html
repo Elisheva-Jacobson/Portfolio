@@ -20,7 +20,8 @@
         <ul class="list-inline">
             <li class="nav-item list-inline-item"><a href="index.html" class="link-light">Home</a></li>
             <!--li class="nav-item list-inline-item"><a href="" class="link-light">About Me</a></!--li-->
-            <li class="nav-item list-inline-item"><a href="Elisheva Jacobson Resume.pdf" class="link-light">Resume</a></li>
+            <li class="nav-item list-inline-item"><a href="Elisheva Jacobson Resume.pdf" class="link-light">Resume</a>
+            </li>
             <li class="nav-item list-inline-item"><a href="skills.html" class="link-light">Skills</a></li>
             <li class="nav-item list-inline-item"><a href="projects.html" class="link-light">Projects</a> </li>
             <li class="nav-item list-inline-item"><a href="https://github.com/Elisheva-Jacobson/Portfolio"
@@ -28,7 +29,7 @@
             <li class="nav-item list-inline-item"><a href="contact.html" class="link-light">Contact</a></li>
         </ul>
     </nav>
-    <form action="" method="POST" class="m-2">
+    <form action="https://formspree.io/f/xnqwnbpv" method="POST" class="m-2">
         <p>
             I would love to hear from you! Please fill out this form and I'll respond to you as soon as possible.
         </p>
@@ -38,15 +39,15 @@
         </p>
         <div class="mb-3">
             <label for="name" class="form-label">Name</label>
-            <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+            <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
         </div>
         <div class="mb-3">
             <label for="email" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
+            <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" required>
         </div>
         <div class="mb-3">
             <label for="message" class="form-label">Message</label>
-            <textarea class="form-control" id="message" rows="3"></textarea>
+            <textarea class="form-control" id="message" rows="3" name="message"></textarea>
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
