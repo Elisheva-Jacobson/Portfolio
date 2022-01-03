@@ -9,7 +9,7 @@
     const menuItems = [];
     const cart = [];
     const quantity = $('#quantity');
-    const addItem = $('#addItem');
+    const addButton = $('#add');
     const comments = $('#comments');
     const cartNum = $('#cart');
     const xButton = $('#x');
@@ -114,12 +114,18 @@
         popUpDiv.show();
     }
 
-    function numCart() {
+    function closePopUp() {
+        optionsDiv.text('');
+        popUpDiv.hide();
+    }
+
+    function numCart(quantity) {
         let previousNum = parseInt(cartNum.text());
+        let addedQuantity = parseInt(quantity);
         if (previousNum) {
-            cartNum.text(++previousNum);
+            cartNum.text(`${previousNum + addedQuantity}`);
         } else {
-            cartNum.text('1');
+            cartNum.text(`${quantity}`);
         }
     }
 
@@ -137,7 +143,7 @@
 
     });
 
-    addItem.click(event => {
+    addButton.click(event => {
         event.preventDefault();
         const cartItem = {
             name: foodName.text(),
@@ -145,8 +151,9 @@
             comments: comments.text()
         };
         cart.push(cartItem);
-        popUpDiv.hide();
-        numCart();
+        closePopUp();
+        //popUpDiv.hide();
+        numCart(quantity.text());
         //need to retrieve the option values
     });
 
@@ -162,7 +169,8 @@
     });
 
     xButton.click(() => {
-        popUpDiv.hide();
+        closePopUp();
+        //popUpDiv.hide();
     });
 
     loadMenuSections();

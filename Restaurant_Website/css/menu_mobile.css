@@ -1,13 +1,8 @@
 body {
     display: grid;
-    /* grid-template-rows: .15fr .50fr /*repeat(autofill, 1fr)*/ /*1fr .15fr; */
     grid-template-rows: minmax(min-content, max-content) 1.5fr;
-    /* grid-template-columns: 1.25fr .75fr; */
     grid-auto-rows: 1.5fr;
     grid-template-columns: 1fr;
-    /* grid-auto-rows: 1fr; */
-    /* grid-template-columns: 1.25fr .75fr; */
-    /* grid-template-columns: 1fr 1fr 1fr; */
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color:antiquewhite;
     /*background color options: blanched almonds, cornsilk, 
@@ -156,15 +151,15 @@ section h2 {
     border: 1px solid black;
     margin-bottom: 15em;
     position: fixed;
-    top: 0;
     left: 25%;
     /* position: fixed; */
     margin: auto;
-    height: 50%;
-    height: 100%;
+    /* height: 50%;
+    height: 100%; */
     width: 50%;
     display: none;
     z-index: 10;
+    overflow: auto;
 }
 
 #x {
