@@ -91,6 +91,11 @@ h1, h2 {
      #home {
         background-image: url('./images/laptop_on_stump-min.jpg');
     } 
+
+    #projects {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
    
 } 
 
