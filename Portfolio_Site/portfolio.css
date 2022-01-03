@@ -67,6 +67,11 @@ h1, h2 {
     border-radius: .25em;
 }
 
+.card img {
+    display: block;
+    margin: auto;
+}
+
 /* nav {
     position: absolute;
     top: 0;
