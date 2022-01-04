@@ -10,7 +10,7 @@ $moderate-padding: .5em;
 $standard-padding: 1em;
 
 $header-height: 80px;
-$second-nav-height: 30px;
+$second-nav-height: 40px;
 
 @mixin full-width($height: 100%) {
     width: 100%;
@@ -79,6 +79,7 @@ html {
 body {
     background-color: $background-color;
     @include full-width();
+    text-align: center;
 }
 
 main {
@@ -222,42 +223,7 @@ h4 {
         display: block;
         padding: $moderate-padding;
     }
-
-    // .blurb {
-    //     padding: $minimal-spacing;
-    //     padding-right: $moderate-padding;
-    //     padding-left: $moderate-padding;
-    //     text-align: justify;
-    //     place-self: center;
-    // }
-
-    // h2 {
-    //     @include emphasize-text();
-    //     padding: $minimal-spacing;
-    //     padding-right: $moderate-padding;
-    //     padding-left: $moderate-padding;
-    //     text-align: justify;
-    //     place-self: center;
-    //     // background-color: black;
-    //     // color: white;
-    // }
-
-    // #citiesBlurb {
-    //     background-color: #81D31A;
-    // }
-
-    // #weatherBlurb {
-    //     background-color: #C3260C;
-    // }
-
-    // #translateBlurb {
-    //     background-color:#34AC8B;
-    // }
-
-    // #covidBlurb {
-    //     background-color:#D85C00 ;
-    // }
-    //needs to be smaller
+    
 }
 
 #cities {
