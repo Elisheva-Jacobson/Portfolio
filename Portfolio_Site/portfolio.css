@@ -43,8 +43,10 @@ h1, h2 {
 
 #home {
     /* background-image: url('./images/field-min.jpg'); */
+    /* background-color:chartreuse; */
     background-image: url('./images/laptop_on_stump-min\ -\ small.jpg');
     background-repeat: no-repeat;
+    background-position-y: 50px;
     /*background-image: url('./images/laptop_on_stump-min\ -\ Copy.jpg');
     /* background-color: lightgray; */
       /* background-image: url('images/laptop_on_stump\ -\ Copy\ \(2\).jpg');
@@ -86,16 +88,21 @@ h1, h2 {
         grid-template-rows: 1fr 1fr;
         /* grid-auto-flow: row; */
     }
+
+    #home {
+        background-image: url('images/laptop_on_stump-min\ -\ tablet.jpg');
+    }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
+    /*Had been 768px*/
     #skills {
         grid-template-columns: 1fr 1fr 1fr;
     }
 
      #home {
         background-image: url('./images/laptop_on_stump-min.jpg');
-    } 
+    }
 
     #projects {
         display: grid;
