@@ -1,7 +1,7 @@
 //import $ from 'jquery';
 // import {jquery} from './index.js';
 // const $ = jquery;
-import {myAPIkeys} from '../config.js';
+import { myAPIkeys } from '../config.js';
 
 let currentWeather;
 let weatherForecast = [];
@@ -11,8 +11,9 @@ let weatherForecast = [];
 
 export const dailyWeather = async (arr) => {
     'use strict';
-    const latitude = arr[0];
-    const longitude = arr[1];
+    const [latitude, longitude] = arr;
+    // const latitude = arr[0];
+    // const longitude = arr[1];
     //look up destructuring and use it in this code
     $('#errorWeather').text('');
     try {

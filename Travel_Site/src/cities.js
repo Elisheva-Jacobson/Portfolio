@@ -66,8 +66,9 @@ export const placesList = async (file, select) => {
 export const findPlaces = async (arr, display, type) => {
     'use strict';
     //console.log('display', display);
-    const latitude = arr[0];
-    const longitude = arr[1];
+    const [latitude, longitude] = arr;
+    // const latitude = arr[0];
+    // const longitude = arr[1];
     display.text('');
     try {
         const r = await fetch(`https://trueway-places.p.rapidapi.com/FindPlacesNearby?location=${latitude}%2C${longitude}&type=${type}&radius=10000&language=en`, {
