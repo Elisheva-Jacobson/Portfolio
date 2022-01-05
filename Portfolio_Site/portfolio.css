@@ -1,27 +1,7 @@
-/* html, body {
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-} */
 
 .container-fluid{
     padding: 0;
-    /* --bs-gutter-x: 0; */
-    /* overflow: hidden; */
 }
-
-/* @media screen max-width(768px) {
-    #home {
-        background-image: url('images/laptop_on_stump - Copy(2).jpg');
-    }
-   
-} */
-
-/* * {
-    outline: 1px solid red;;
-} */
-
 
 a {
     text-decoration: none;
@@ -42,16 +22,9 @@ h1, h2 {
 }
 
 #home {
-    /* background-image: url('./images/field-min.jpg'); */
-    /* background-color:chartreuse; */
     background-image: url('./images/laptop_on_stump-min\ -\ small.jpg');
     background-repeat: no-repeat;
     background-position-y: 50px;
-    /*background-image: url('./images/laptop_on_stump-min\ -\ Copy.jpg');
-    /* background-color: lightgray; */
-      /* background-image: url('images/laptop_on_stump\ -\ Copy\ \(2\).jpg');
-      background-repeat: no-repeat; */
-      /* background-size: cover; */
 } 
 
 #headings {
@@ -74,19 +47,10 @@ h1, h2 {
     margin: auto;
 }
 
-/* nav {
-    position: absolute;
-    top: 0;
-    left: 0;
-} */
-
 @media screen and (min-width: 576px) {
     #skills {
-        /* display: grid;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr; */
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
-        /* grid-auto-flow: row; */
     }
 
     #home {
@@ -110,23 +74,3 @@ h1, h2 {
     }
    
 } 
-
-/* #home {
-    background-image: url('images/laptop_on_grass.jpg');
-} */
-/* ul, li {
-    list-style-type: none;
-} */
-
-
-
-/* #home {
-    position: absolute;
-    top: 40%;
-    left: 40%;
-} */
-
-/* #background {
-    opacity: ;
-} */
-
