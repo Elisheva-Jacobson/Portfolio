@@ -13,6 +13,9 @@
     const comments = $('#comments');
     const cartNum = $('#cart');
     const xButton = $('#x');
+    const cartItems = $('#cartItems');
+    const sidebar = $('#sidebar');
+    const shoppingBag = $('#shoppingBag');
 
     async function loadMenuSections() {
         try {
@@ -129,6 +132,15 @@
         }
     }
 
+    function addToSideBar(item) {
+        $(`<div class="cartItem">
+        <div class="itemTitle">${item.name}</div>
+        <div class="itemComments">${item.comments}</div>
+        <div class="itemQuantity">${item.quantity}<img src="minus.jpg" alt="minus"><span>1</span><img src="plus.jpg" alt="plus">
+        </div>
+    </div>`).appendTo(cartItems);
+    }
+
     $('#plus').click(() => {
         let previousQ = parseInt(quantity.text());
         quantity.text(++previousQ);
@@ -151,6 +163,7 @@
             comments: comments.text()
         };
         cart.push(cartItem);
+        addToSideBar(cartItem);
         closePopUp();
         //popUpDiv.hide();
         numCart(quantity.text());
@@ -171,6 +184,10 @@
     xButton.click(() => {
         closePopUp();
         //popUpDiv.hide();
+    });
+
+    shoppingBag.click(() => {
+        sidebar.show();
     });
 
     loadMenuSections();
