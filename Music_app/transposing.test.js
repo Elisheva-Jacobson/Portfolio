@@ -15,6 +15,22 @@ describe('testing find the difference basic functionality', () => {
 
         expect(actual).to.equal(expected);
     });
+
+    it ('returns a correct numerical difference between two chords when one is m, sus, aug, dim, 7, or 9', () => {
+        const expected = 3;
+        const actual = findDifference('Am', 'Cm');
+
+        expect(actual).to.equal(expected);
+    });
+
+    it('throws an error when one or both chords are not found in the list', () => {
+        try {
+            findDifference('H', 'A');
+        } catch(err) {
+            expect(err).to.eql(new Error('Invalid input'));
+        }
+        expect(findDifference('H', 'A')).to.be.a('Error');
+    });
 });
 
 describe('testing basic functionality of transposing function', () => {
@@ -67,6 +83,28 @@ describe('testing basic functionality of transposing function', () => {
         const chords = ['Esus', 'Cdim', 'Gaug', 'D7', 'B9'];
         const difference = -7;
         const expected = ['Asus', 'Fdim', 'Caug', 'G7', 'E9'];
+        const actual = transpose(chords, difference);
+
+        expect(actual).to.deep.equal(expected);
+    });
+
+    it('returns an error message when given an invalid difference', () => {
+        const chords = ['E', 'C', 'G', 'D'];
+        const difference = 'Hi';
+
+        try {
+            transpose(chords, difference);
+        } catch(err) {
+            expect(err).to.eql(new Error('Invalid transposition'));
+        }
+        expect(transpose(chords, difference)).to.be.a('Error');
+
+    });
+
+    it('returns unfound for a chord when that chord is not found in the list', () => {
+        const chords = ['E', 'C', 'H', 'D'];
+        const difference = -7;
+        const expected = ['A', 'F', 'Unfound', 'G'];
         const actual = transpose(chords, difference);
 
         expect(actual).to.deep.equal(expected);
