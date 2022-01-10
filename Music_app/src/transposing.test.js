@@ -88,6 +88,15 @@ describe('testing basic functionality of transposing function', () => {
         expect(actual).to.deep.equal(expected);
     });
 
+    it('returns a correctly transposed list of chords when the list includes aug, dim, sus, 7, 9, or m chords that are also # or b', () => {
+        const chords = ['Ebsus', 'Bdim', 'F#aug', 'C#7', 'Bb9'];
+        const difference = -6;
+        const expected = ['Asus', 'Fdim', 'Caug', 'G7', 'E9'];
+        const actual = transpose(chords, difference);
+
+        expect(actual).to.deep.equal(expected);
+    });
+
     it('returns an error message when given an invalid difference', () => {
         const chords = ['E', 'C', 'G', 'D'];
         const difference = 'Hi';

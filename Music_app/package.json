@@ -4,7 +4,7 @@
   "description": "",
   "main": "transposing.js",
   "scripts": {
-    "test": "mocha transposing.test.js"
+    "test": "mocha src/transposing.test.js"
   },
   "keywords": [],
   "author": "",

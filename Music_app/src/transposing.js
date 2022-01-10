@@ -1,7 +1,6 @@
 const scale = ['A', 'Bb', 'B', 'C', 'C#', 'D', 'Eb', 'E', 'F', 'F#', 'G', 'G#'];
 
 export function findDifference(chord1, chord2) {
-
     try {
         [chord1] = dealWithMinors(chord1);
         [chord2] = dealWithMinors(chord2);
@@ -13,7 +12,7 @@ export function findDifference(chord1, chord2) {
         const difference = index2 - index1;
         return difference;
     } catch (err) {
-        console.log(err);
+        //console.log(err);
         return err;
     }
 }
@@ -21,7 +20,7 @@ export function findDifference(chord1, chord2) {
 function dealWithMinors(chord) {
     let fragment = '';
     if (chord.length > 1) {
-        if (chord.substring(1) !== '#' && chord.substring(1) !== 'b') {
+        if (chord.substring(1, 2) !== '#' && chord.substring(1, 2) !== 'b') {
             fragment = chord.substring(1);
             chord = chord.substring(0, 1);
         } else if (chord.length > 2) {
@@ -35,7 +34,7 @@ function dealWithMinors(chord) {
 export function transpose(chordArray, difference) {
     try {
         if (typeof(difference) != typeof(1)) {
-            console.log(typeof difference);
+            // console.log(typeof difference);
             throw new Error('Invalid transposition');
         }
         const transposed = [];
@@ -53,19 +52,20 @@ export function transpose(chordArray, difference) {
                 }
                 transposed.push(scale[index] + fragment);
             } else {
-                console.log('error', scale.indexOf(chord));
+                // console.log('error', scale.indexOf(chord));
                 transposed.push('Unfound');
             }
 
 
         });
-        console.log(transposed);
+        //console.log(transposed);
         return transposed;
     } catch(err) {
         return err;
     }
     
 }
+//need to deal with alternative names for #s and bs
 
 const change = findDifference('A', 'E');
 console.log(change);
