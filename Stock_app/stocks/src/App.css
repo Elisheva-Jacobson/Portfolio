@@ -1,0 +1,66 @@
+.header {
+  text-align: center;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+div {
+  padding: .5rem;
+}
+
+input {
+  margin: .25em;
+  border-radius: .10em;
+}
+
+.stock {
+  background-color: lightgray;
+  border-radius: .10em;
+  text-align: center;
+}
+
+.arrow {
+  height: 20px;
+  width: 20px;
+  margin: 0;
+}
+
+.companyName {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.companyWebsite {
+  display: block;
+  text-align: center;
+}
+
+.companyIndustry {
+  font-style: italic;
+  text-align: center;
+}
+
+.companyDescription {
+
+}
+
+.price {
+  font-weight: bold;
+  font-size: 1.10rem;
+}
+
+.price span {
+  padding: .25em;
+}
+
+.newsPicture {
+  max-width: 500px;
+  max-height: 500px;
+  display: inline-block;
+}
+
+.newsItem {
+  display: inline-block;
+  margin: 1em;
+}
