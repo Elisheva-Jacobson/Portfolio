@@ -15,9 +15,11 @@ export default function App() {
     console.log(typeof error, 'typeof error');
   })
 
-  function buttonHandler () {
-    setSymbol(inputSymbol);
-    setError(null);
+  function enterHandler(event) {
+    if (event.key === 'Enter') {
+      setSymbol(inputSymbol);
+      setError(null);
+    }
   }
 
 
@@ -25,8 +27,7 @@ export default function App() {
     <div className="App">
       <Header title="Stocks"/>
       <form onSubmit={e => e.preventDefault()}>
-        <label>Enter Stock Ticker Symbol <input name="symbol" placeholder="symbol" value={inputSymbol} onChange={event => {setInputSymbol(event.target.value)}}/></label>
-        <button onClick={buttonHandler}>Go</button>
+        <label>Enter Stock Ticker Symbol <input name="symbol" placeholder="symbol" value={inputSymbol} onChange={event => {setInputSymbol(event.target.value)}} onKeyDown={event => enterHandler(event)}/></label>
       </form>
       {!symbol ? null : error ? <Error message="The symbol you entered could not be found. Please try a different symbol."/> : <Stock symbol={symbol} setError={setError}></Stock>}
     </div>
