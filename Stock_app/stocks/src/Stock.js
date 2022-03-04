@@ -17,10 +17,6 @@ export default function Stock(props) {
         getCompany();
       }, [symbol]);
 
-      useEffect(() => {
-        console.log('stock symbol', symbol);
-      });
-
     async function getCompany() {
         try {
           const r = await fetch(`https://finnhub.io/api/v1/stock/profile2?symbol=${symbol}&token=c7o52faad3idf06mn5k0`);
@@ -28,7 +24,7 @@ export default function Stock(props) {
             throw new Error(`${r.status} ${r.statusText}`);
           }
           const data = await r.json();
-          console.log('data', data);
+          //console.log('data', data);
           setInfo(data);
           validateProfile(data);
           //setError(false);
@@ -55,8 +51,8 @@ export default function Stock(props) {
       <div className="exchange">Traded on the <span>{info.exchange}</span></div>
       <Description symbol={symbol}/>
       <div>Total Shares Outstanding <span>{info.shareOutstanding}</span></div>
+      <Ticker symbol ={symbol}/>
       </div> : null}
-        <Ticker symbol ={symbol}/>
     </div>);
 }
 

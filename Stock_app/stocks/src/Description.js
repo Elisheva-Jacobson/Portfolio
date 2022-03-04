@@ -19,7 +19,7 @@ export default function Description(props) {
                 throw new Error(`${r.status} ${r.statusText}`);
             }
             const data = await r.json();
-            console.log(data);
+            //console.log(data);
             setDescription(data.results.description);
         } catch(err) {
             console.error(err);

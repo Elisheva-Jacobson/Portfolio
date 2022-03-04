@@ -9,11 +9,11 @@ export default function App() {
   let [symbol, setSymbol] = useState();
   let [error, setError] = useState(false);
 
-  useEffect(() => {
-    console.log('symbol', symbol);
-    console.log('error', error);
-    console.log(typeof error, 'typeof error');
-  })
+  // useEffect(() => {
+  //   console.log('symbol', symbol);
+  //   console.log('error', error);
+  //   console.log(typeof error, 'typeof error');
+  // })
 
   function enterHandler(event) {
     if (event.key === 'Enter') {

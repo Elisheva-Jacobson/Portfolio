@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState} from 'react';
 import PropTypes from 'prop-types';
 
 export default function Ticker(props) {
@@ -18,9 +18,12 @@ export default function Ticker(props) {
         throw new Error(`${r.status} ${r.statusText}`);
       }
       const data = await r.json();
-      console.log(data);
-      setInfo({price: data.c, direction: findDirection(data.d), change: data.d, 
-        percentChange: data.dp, totalShares: data.t, high: data.h, low: data.l});
+      setInfo({
+        price: data.c, direction: findDirection(data.d), change: data.d,
+        percentChange: data.dp, totalShares: data.t, high: data.h, low: data.l
+      });
+      console.log('symbol', symbol);
+      console.log('info', info);
       setDate(dateString);
     } catch (err) {
       console.error(err);
@@ -28,7 +31,6 @@ export default function Ticker(props) {
   }
 
   function findDirection(change) {
-    console.log(change, 'change');
     return change > 0 ? 'up' : 'down';
     //if it is = will be down in this case
   }
@@ -39,22 +41,25 @@ export default function Ticker(props) {
   }
 
   useEffect(() => {
-    clearInterval(intervalId);
     getPrice();//so it shouldn't wait 30 seconds in the beginning
     intervalId = setInterval(() => {
       getPrice();
-    }, 60000);
+    }, 30000);
+    return () => {
+      console.log('returned function running');
+      clearInterval(intervalId);
+    };
   }, [symbol]);
 
   return (<div>
-    {info ? <div><div className="price">Price 
-    <span> {info.price} </span> 
-    <img className="arrow" src={info.direction === 'up' ? 'images/upArrow.png' : 'images/downArrow.png'} alt={info.direction
-    } /> <span className="pointsChange"> {info.change} </span>
-    <span className="percentChange"> {info.percentChange}% </span></div>
+    {info ? <div>{console.log('info in div', info)}<div className="price">Price
+      <span> {info.price} </span>
+      <img className="arrow" src={info.direction === 'up' ? 'images/upArrow.png' : 'images/downArrow.png'} alt={info.direction
+      } /> <span className="pointsChange"> {info.change} </span>
+      <span className="percentChange"> {info.percentChange}% </span></div>
       <div>High <span>{info.high}</span> Low <span>{info.low}</span></div>
-      <div>Last Updated <span>{date}</span></div> 
-      </div> : null}
+      <div>Last Updated <span>{date}</span></div>
+    </div> : null}
   </div>);
 }
 
