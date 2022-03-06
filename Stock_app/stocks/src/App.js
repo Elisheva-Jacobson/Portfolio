@@ -23,7 +23,7 @@ export default function App() {
       <form onSubmit={e => e.preventDefault()}>
         <label>Enter Stock Ticker Symbol <input name="symbol" placeholder="symbol" value={inputSymbol} onChange={event => {setInputSymbol(event.target.value)}} onKeyDown={event => enterHandler(event)}/></label>
       </form>
-      {!symbol ? null : error ? <Error message="The symbol you entered could not be found. Please try a different symbol."/> : <Stock symbol={symbol} setError={setError}></Stock>}
+      {!symbol ? null : error ? <Error message={`Data for ${symbol} could not be found. Please try a different symbol.`}/> : <Stock symbol={symbol} setError={setError}></Stock>}
     </div>
   );
 }
