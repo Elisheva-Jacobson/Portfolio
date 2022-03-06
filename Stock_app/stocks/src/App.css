@@ -46,7 +46,7 @@ input {
 }
 
 .price {
-  font-weight: bold;
+  font-weight: 700;
   font-size: 1.10rem;
 }
 
@@ -70,4 +70,31 @@ input {
 #currency {
   font-size: .75rem;
   padding: 0;
+}
+
+.dataTable {
+  margin: auto;
+  width: 60%;
+}
+
+.dataTable th {
+  border-bottom: 1px solid black;
+  text-align: center;
+  font-weight:600;
+}
+
+.dataTable td {
+  text-align: center;
+  font-weight: 300;
+}
+
+#dateTime {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.error {
+  color: red;
+  font-size: 1.25em;
+  font-weight: 500;
 }

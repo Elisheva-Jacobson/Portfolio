@@ -2,11 +2,14 @@ import React, {useState, useEffect} from 'react';
 import Ticker from './Ticker';
 import PropTypes from 'prop-types';
 import Description from './Description';
+import DataTable from './DataTable';
 
 export default function Stock(props) {
   let [symbol, setSymbol] = useState(props.symbol);
-    const setError = props.setError;
-    let [info, setInfo] = useState();
+  const setError = props.setError;
+  let [info, setInfo] = useState();
+  const dataLabels = ['High', 'Low', 'Open', 'Prev Close'];
+  let [tableData, setTableData] = useState();
 
     useEffect(() => {
         setSymbol(props.symbol);
@@ -24,10 +27,8 @@ export default function Stock(props) {
             throw new Error(`${r.status} ${r.statusText}`);
           }
           const data = await r.json();
-          //console.log('data', data);
           setInfo(data);
           validateProfile(data);
-          //setError(false);
         } catch(err) {
           console.error(err);
           setError(true);
@@ -50,8 +51,9 @@ export default function Stock(props) {
       <div >Industry <span className="companyIndustry">{info.finnhubIndustry}</span></div>
       <div className="exchange">Traded on the <span>{info.exchange}</span></div>
       <Description symbol={symbol}/>
-      <div>Total Shares Outstanding <span>{info.shareOutstanding}</span></div>
-      <Ticker symbol ={symbol} currency ={info.currency}/>
+      {/*<div>Total Shares Outstanding <span>{info.shareOutstanding}</span></div>*/}
+      <Ticker symbol ={symbol} currency ={info.currency} returnTableData={setTableData}/>
+      <DataTable labels = {dataLabels} values ={tableData}/>
       </div> : null}
     </div>);
 }

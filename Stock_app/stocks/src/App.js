@@ -1,5 +1,5 @@
 import './App.css';
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import Stock from './Stock.js';
 import Header from './Header';
 import Error from './Error';
@@ -8,12 +8,6 @@ export default function App() {
   let [inputSymbol, setInputSymbol] = useState('');
   let [symbol, setSymbol] = useState();
   let [error, setError] = useState(false);
-
-  // useEffect(() => {
-  //   console.log('symbol', symbol);
-  //   console.log('error', error);
-  //   console.log(typeof error, 'typeof error');
-  // })
 
   function enterHandler(event) {
     if (event.key === 'Enter') {
