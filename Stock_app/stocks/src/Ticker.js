@@ -1,14 +1,16 @@
-import React, { useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 
 export default function Ticker(props) {
   let [symbol, setSymbol] = useState(props.symbol);
+  let [currency, setCurrency] = useState(props.currency);
   let [info, setInfo] = useState();
   let [date, setDate] = useState();
   let intervalId;
 
   useEffect(() => {
     setSymbol(props.symbol);
+    setCurrency(props.currency);
   }, [props]);
 
   async function getPrice() {
@@ -54,9 +56,11 @@ export default function Ticker(props) {
   return (<div>
     {info ? <div>{console.log('info in div', info)}<div className="price">Price
       <span> {info.price} </span>
+      <span id="currency">{currency}</span>
+      <span className="pointsChange"> {info.change} </span>
+      <span className="percentChange"> ({info.percentChange.toFixed(2)}%) </span>
       <img className="arrow" src={info.direction === 'up' ? 'images/upArrow.png' : 'images/downArrow.png'} alt={info.direction
-      } /> <span className="pointsChange"> {info.change} </span>
-      <span className="percentChange"> {info.percentChange}% </span></div>
+      } /></div>
       <div>High <span>{info.high}</span> Low <span>{info.low}</span></div>
       <div>Last Updated <span>{date}</span></div>
     </div> : null}

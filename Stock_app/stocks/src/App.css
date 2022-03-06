@@ -51,7 +51,9 @@ input {
 }
 
 .price span {
-  padding: .25em;
+  padding-left: .25em;
+  padding-top: .25em;
+  padding-bottom: .25em;
 }
 
 .newsPicture {
@@ -63,4 +65,9 @@ input {
 .newsItem {
   display: inline-block;
   margin: 1em;
+}
+
+#currency {
+  font-size: .75rem;
+  padding: 0;
 }

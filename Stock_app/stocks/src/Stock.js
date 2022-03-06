@@ -51,7 +51,7 @@ export default function Stock(props) {
       <div className="exchange">Traded on the <span>{info.exchange}</span></div>
       <Description symbol={symbol}/>
       <div>Total Shares Outstanding <span>{info.shareOutstanding}</span></div>
-      <Ticker symbol ={symbol}/>
+      <Ticker symbol ={symbol} currency ={info.currency}/>
       </div> : null}
     </div>);
 }
