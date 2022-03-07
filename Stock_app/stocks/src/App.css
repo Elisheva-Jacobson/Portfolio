@@ -2,6 +2,8 @@
   text-align: center;
   font-weight: bold;
   font-size: 2rem;
+  margin: 0;
+  padding: 0;
 }
 
 div {
@@ -17,6 +19,8 @@ input {
   background-color: lightgray;
   border-radius: .10em;
   text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
 .arrow {
@@ -41,30 +45,30 @@ input {
   text-align: center;
 }
 
-.companyDescription {
-
-}
-
 .price {
   font-weight: 700;
-  font-size: 1.10rem;
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
 }
 
-.price span {
-  padding-left: .25em;
-  padding-top: .25em;
-  padding-bottom: .25em;
+/* .price span {
+  padding-left: .10em;
+} */
+
+#percentChange, #pointsChange {
+  padding-left: .10em;
+}
+
+#currency {
+  padding: 0;
+  margin: 0;
 }
 
 .newsPicture {
   max-width: 500px;
   max-height: 500px;
   display: inline-block;
-}
-
-.newsItem {
-  display: inline-block;
-  margin: 1em;
 }
 
 #currency {
@@ -74,13 +78,13 @@ input {
 
 .dataTable {
   margin: auto;
-  width: 60%;
+  width: 90%;
 }
 
 .dataTable th {
   border-bottom: 1px solid black;
   text-align: center;
-  font-weight:600;
+  font-weight: 600;
 }
 
 .dataTable td {
@@ -91,10 +95,42 @@ input {
 #dateTime {
   text-transform: uppercase;
   font-weight: 700;
+  font-size: .9rem;
+  padding-top: 1em;
 }
 
 .error {
   color: red;
   font-size: 1.25em;
   font-weight: 500;
+}
+
+#curPrice {
+  font-size: 1.25rem;
+}
+
+@media screen and (min-width: 768px) {
+
+  .stock {
+    padding: .5em;
+  }
+
+  .dataTable {
+    width: 60%;
+  }
+
+
+  .price span {
+    padding: .25em;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .price {
+    font-size: 1.25em;
+  }
+
+  #curPrice {
+    font-size: 1.5rem;
+  }
 }

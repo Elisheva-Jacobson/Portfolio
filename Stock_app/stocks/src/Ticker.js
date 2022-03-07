@@ -62,10 +62,10 @@ export default function Ticker(props) {
 
   return (<div>
     {info ? <div><div className="price">Price
-      <span> {info.price} </span>
+      <span id="curPrice"> {info.price}</span>
       <span id="currency">{currency}</span>
-      <span className="pointsChange">{info.direction === 'up' && '+'}{info.change} </span>
-      <span className="percentChange"> ({info.percentChange.toFixed(2)}%) </span>
+      <span id="pointsChange"> {info.direction === 'up' && '+'}{info.change.toFixed(2)} </span>
+      <span id="percentChange">({info.percentChange.toFixed(2)}%)</span>
       <img className="arrow" src={info.direction === 'up' ? 'images/upArrow.png' : 'images/downArrow.png'} alt={info.direction
       } /></div>
       <div id="dateTime">As of <span>{date}</span></div>

@@ -48,12 +48,12 @@ export default function Stock(props) {
       info ? <div>
         <div className="companyName">{info.name}</div>
         <a className="companyWebsite" href={info.weburl} target="_blank" rel="noreferrer">{info.weburl}</a>
-      <div >Industry <span className="companyIndustry">{info.finnhubIndustry}</span></div>
       <div className="exchange">Traded on the <span>{info.exchange}</span></div>
-      <Description symbol={symbol}/>
+      <div >Industry <span className="companyIndustry">{info.finnhubIndustry}</span></div>
       {/*<div>Total Shares Outstanding <span>{info.shareOutstanding}</span></div>*/}
       <Ticker symbol ={symbol} currency ={info.currency} returnTableData={setTableData}/>
       <DataTable labels = {dataLabels} values ={tableData}/>
+      <Description symbol={symbol}/>
       </div> : null}
     </div>);
 }

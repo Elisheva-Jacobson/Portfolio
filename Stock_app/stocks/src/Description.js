@@ -28,7 +28,7 @@ export default function Description(props) {
     }
 
   return (
-    <div>{description ? description : null}</div>
+    <div id="companyDescription">{description ? description : null}</div>
   )
 }
 
