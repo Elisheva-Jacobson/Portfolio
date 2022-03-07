@@ -59,7 +59,8 @@ export default function Stock(props) {
 }
 
 Stock.propTypes = {
-  symbol: PropTypes.string.isRequired
+  symbol: PropTypes.string.isRequired,
+  setError: PropTypes.func.isRequired
 };
 
 //sample response

@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import PropTypes from 'prop-types';
 
 export default function DataTable(props) {
     let [labels, setLabels] = useState(props.labels);
@@ -27,3 +28,8 @@ export default function DataTable(props) {
     
   );
 }
+
+DataTable.propTypes = {
+    labels: PropTypes.arrayOf(PropTypes.string).isRequired,
+    values: PropTypes.array.isRequired
+};

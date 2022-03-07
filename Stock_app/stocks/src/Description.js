@@ -1,4 +1,5 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect} from 'react';
+import PropTypes from 'prop-types';
 
 export default function Description(props) {
     let [symbol, setSymbol] = useState(props.symbol);
@@ -30,3 +31,7 @@ export default function Description(props) {
     <div>{description ? description : null}</div>
   )
 }
+
+Description.propTypes = {
+    symbol: PropTypes.string.isRequired
+};

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-import DataTable from './DataTable';
 
 export default function Ticker(props) {
   let [symbol, setSymbol] = useState(props.symbol);
@@ -75,7 +74,9 @@ export default function Ticker(props) {
 }
 
 Ticker.propTypes = {
-  symbol: PropTypes.string.isRequired
+  symbol: PropTypes.string.isRequired,
+  currency: PropTypes.string.isRequired,
+  setTableData: PropTypes.func.isRequired
 }
 
 //set the arrow up or down
