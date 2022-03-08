@@ -1,4 +1,0 @@
-Color of logo background is rgb(66, 40, 40)
-Color of logo text is rgb(231, 130, 0)
-Color of logo arch is rgb(120, 71, 71)
-Color of logo flame is rgb()
