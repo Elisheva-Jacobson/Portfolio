@@ -11,17 +11,16 @@ export default function App() {
 
   function enterHandler(event) {
     if (event.key === 'Enter') {
-      setSymbol(inputSymbol);
-      setError(null);
+        setSymbol(inputSymbol);
+        setError(false);
     }
   }
-
 
   return (
     <div className="App">
       <Header title="Stocks"/>
       <form onSubmit={e => e.preventDefault()}>
-        <label>Enter Stock Ticker Symbol <input name="symbol" placeholder="symbol" value={inputSymbol} onChange={event => {setInputSymbol(event.target.value)}} onKeyDown={event => enterHandler(event)}/></label>
+        <label>Enter Stock Symbol <input name="symbol" placeholder="symbol" value={inputSymbol} onChange={event => {setInputSymbol(event.target.value)}} onKeyDown={event => enterHandler(event)}/></label>
       </form>
       {!symbol ? null : error ? <Error message={`Data for ${symbol} could not be found. Please try a different symbol.`}/> : <Stock symbol={symbol} setError={setError}></Stock>}
     </div>
