@@ -1,6 +1,3 @@
-//import $ from 'jquery';
-// import {jquery} from './index.js';
-// const $ = jquery;
 import {myAPIkeys} from '../config.js';
 
 export const countriesList = async (select) => {
@@ -11,7 +8,6 @@ export const countriesList = async (select) => {
             throw new Error(`${r.status} ${r.statusText}`);
         }
         const data = await r.json();
-        //console.log(data);
         const countries = Object.keys(data);
         const countryCodes = Object.values(data);
         for (let i = 0; i < countries.length; i++) {

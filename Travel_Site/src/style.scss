@@ -1,9 +1,7 @@
-
 $background-color: white;
 $secondary-background-color: #12B2EB;
 $third-background-color: #BFFBFA;
 $highlight-color: blue;
-//$colors-array: (#81D31A, #34AC8B, #D85C00, #C3260C);
 
 $minimal-spacing: .25em;
 $moderate-padding: .5em;
@@ -56,12 +54,6 @@ $second-nav-height: 40px;
     flex-direction: $direction;
 }
 
-// @mixin grid-center() {
-//     padding: $standard-padding;
-//     place-self: center;
-//     text-align: center;
-// }
-
 @mixin invert-colors($background: black) {
     color: white;
     background: $background;
@@ -69,7 +61,6 @@ $second-nav-height: 40px;
 
 * {
     font-family: Tahoma, Geneva, Verdana, sans-serif;
-    //outline: 1px solid red;
 }
 
 html {
@@ -88,8 +79,6 @@ main {
 }
 
 header {
-    // background-color: black;
-    // color: white;
     background-color: rgb(16, 157, 212) ;
     @include bar();
     height: $header-height;
@@ -148,71 +137,34 @@ h4 {
 
 #home {
     @include full-width();
-    //background-image: url('../images/world_map-min.jpg');
-    // padding-top: $moderate-padding;
-    // padding-bottom: $moderate-padding;
-    //should put this back if take away colors
 
     vertical-align: center;
 
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr .5fr 1fr;
-    // grid-template-columns: 1fr 1fr;
-    // grid-template-rows: 1fr 1fr;
-
-    // grid-template-columns: 1fr;
-    // grid-template-rows: repeat(5, 1fr);
 
     #mainHome {
         background-image: url('../images/gray-world-map-min.jpg');
         grid-row: 1 / 2;
-
-        // grid-column: 1 / 3;
-        // grid-row: 1 / 2;
     }
 
     #mission {
-
-        // grid-column: 1 / 2;
-        // grid-row: 2 / 3;
        grid-row: 2 / 3;
 
        display: inline-block;
        @include full-width();
-       //@include grid-center();
-       //display: flex;
        @include flex-center(column);
        padding: $standard-padding;
-       //@include invert-colors(#1063DE);
-       //flex-direction: column;
-       //justify-content: center;
-
-    //    div {
-    //        margin: auto;
-    //    }
     }
 
     #whatToDo {
-
-        // grid-column: 2 / 3;
-        // grid-row: 2 / 3;
         grid-row: 3 / 4;
         display: inline-block;
         @include full-width();
-        // height: 100%;
-        // width: 100%;
-        // box-sizing: border-box;
-
-       //@include grid-center();
        @include flex-center(column);
-       //flex-direction: column;
        @include invert-colors(navy);
        padding: $standard-padding;
-
-    //    div {
-    //        margin: auto;
-    //    }
     }
 
     ul, li {
@@ -234,7 +186,6 @@ h4 {
         border-bottom: 2px solid black;
         border-collapse: collapse;
         padding: $standard-padding;
-        //overflow-wrap: break-word;
     }
 
     #attractions, #food, #health, #stores, #transportation, #useful {

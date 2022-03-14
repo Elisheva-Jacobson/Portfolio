@@ -1,15 +1,5 @@
 import qs from '../node_modules/qs/dist/qs.js';
 import { myAPIkeys } from '../config.js';
-//import $ from 'jquery';
-// import {jquery} from './index.js';
-// const $ = jquery;
-
-
-//const translateInput = $('#translateInput');
-//const translateOutput = $('#translateOutput');
-//const languageChoice = $('#language');
-
-
 
 export const displayLanguages = async /*function showLanguages*/() => {
     'use strict';
@@ -55,7 +45,6 @@ export const retrieveTranslation = async () => {
         }
         const output = await r.json();
         $('#translateOutput').text(output.data.translations[0].translatedText);
-        console.log(output);
     } catch (err) {
         console.error(err);
     }

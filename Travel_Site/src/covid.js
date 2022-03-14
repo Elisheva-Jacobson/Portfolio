@@ -1,16 +1,4 @@
 import { myAPIkeys } from '../config.js';
-//import $ from 'jquery';
-// import { jquery } from './index.js';
-// const $ = jquery;
-
-//const covidDisplay = $('#covidDisplay');
-//const totalTable = $('#covidTotals');
-//const countriesDropdown = $('#countries');
-// const countryTotal = $('#countryTotal');
-// const confirmedTotal = $('#confirmedTotal');
-// const criticalTotal = $('#criticalTotal');
-// const recoveredTotal = $('#recoveredTotal');
-// const deathsTotal = $('#deathsTotal');
 
 export const getCountries = async () => {
     'use strict';
@@ -26,7 +14,6 @@ export const getCountries = async () => {
             throw new Error(`${r.status} ${r.statusText}`);
         }
         const countries = await r.json();
-        console.log(countries);
         countries.response.forEach(country => {
             $(`<option value="${country}">${country}</option>`).appendTo($('#countries'));
         });
@@ -37,7 +24,6 @@ export const getCountries = async () => {
 
 export const countryCurrents = async () => {
     'use strict';
-    //errorDiv.text('');
     $('#errorCovid').text('');
     const country = $('#countries').val();
     const url = `https://covid-193.p.rapidapi.com/statistics?country=${country}`;
@@ -53,7 +39,6 @@ export const countryCurrents = async () => {
             throw new Error(`${r.status} ${r.statusText}`);
         }
         const data = await r.json();
-        //console.log(data);
         $('#covidCountry').text(data.response[0].country);
         $('#population').text(convertNumToString(data.response[0].population));
         $('#newCases').text(convertNumToString(data.response[0].cases.new));
@@ -69,7 +54,6 @@ export const countryCurrents = async () => {
         $('#testsMill').text(convertNumToString(data.response[0].tests['1M_pop']));
         $('#covidDaily').show();
     } catch (err) {
-        //errorDiv.text('Data for that country was not found');
         $('#errorCovid').text('Data for that country was not found');
         $('#covidDaily').hide();
         console.error(err);
