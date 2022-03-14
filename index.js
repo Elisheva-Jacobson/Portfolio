@@ -1,3 +1,3 @@
-import navigate from '/node_modules/js-routing/index.js';
+import navigate from 'js-routing';
 
 navigate(['home', 'skills', 'projects', 'contact']);
