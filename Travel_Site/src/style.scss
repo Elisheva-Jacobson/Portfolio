@@ -162,9 +162,9 @@ h4 {
         grid-row: 3 / 4;
         display: inline-block;
         @include full-width();
-       @include flex-center(column);
-       @include invert-colors(navy);
-       padding: $standard-padding;
+        @include flex-center(column);
+        @include invert-colors(navy);
+        padding: $standard-padding;
     }
 
     ul, li {
