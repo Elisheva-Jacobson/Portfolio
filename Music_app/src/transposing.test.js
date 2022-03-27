@@ -23,6 +23,13 @@ describe('testing find the difference basic functionality', () => {
         expect(actual).to.equal(expected);
     });
 
+    it('returns a correct numerical difference between two chords when one is m, sus, aug, dim, 7, or 9, and is also # or b', () => {
+        const expected = 3;
+        const actual = findDifference('C#m', 'E');
+
+        expect(actual).to.equal(expected);
+    });
+
     it('throws an error when one or both chords are not found in the list', () => {
         try {
             findDifference('H', 'A');
